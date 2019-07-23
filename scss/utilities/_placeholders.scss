@@ -1,0 +1,56 @@
+/* SCSS Partial */
+/* Links, Images, Headlines, Nav Items */
+
+// Center Text
+%centered {
+	text-align: center;
+}
+// Text with indent and left border
+%border-left {
+	margin-left: 1rem;
+	border-left: 5px solid $color-primary;
+}
+// Grid container styles
+%grid-container {
+	padding: 1rem 5px;
+  margin-top: .5rem;
+	margin-bottom: .5rem;
+  font-weight: 700;
+  color: #7D7D7D;
+  border-radius: 5px;
+  text-align: left;
+}
+// Button styles
+%buttons {
+	@include text(.85rem,$weight:700, $color:$white);
+  font-family: $font__family--secondary;
+	display: block;
+  margin-bottom: 1rem;
+  padding: .75rem 0;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+	@media #{$brk-desktop} {
+		margin: 0 2.25%;
+		width: 15%;
+		display: inline;
+	};
+}
+// Nav item {
+%nav-item {
+	padding: .75rem 10px;
+	display: block;
+	width: 100%;
+	height: 100%;
+  text-decoration: none;
+  color: #242424;
+}
+// Selected Nav Item
+%selected {
+	&:first-child a {
+		border-radius: 5px;
+  	background-color: #58e1c1;
+  	color: #fff;
+	}
+}

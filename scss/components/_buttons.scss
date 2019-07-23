@@ -1,0 +1,19 @@
+/* SCSS Document */
+.btn {
+	@include bg-colors($ui-colors);
+	&--default {
+		@extend %buttons;
+	};
+	&--success {
+		@extend %buttons;
+	};
+	&--error {
+		@extend %buttons;
+	};
+	&--warning {
+		@extend %buttons;
+	}
+	&--info {
+		@extend %buttons;
+	};
+}

@@ -1,0 +1,18 @@
+/* SCSS Document */
+.nav {
+  @extend %centered;
+}
+.nav__item {
+	@extend %selected;
+  @include mq(large) {
+    margin-right: em(25px);
+	};
+}
+.nav__item a {
+	@extend %nav-item;
+}
+.nav {
+	@include mq(large) {
+    @include flexy(space-between,$align-items: center);
+	};
+}

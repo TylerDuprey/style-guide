@@ -1,0 +1,44 @@
+/* SCSS Partial */
+/* Media Queries, Flexbox Settings, Element and Modifier BEM Selectors */
+
+// Web Fonts (in case I need them on future projects)
+
+// Text
+
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+	font-size: $size;
+	line-height: $l-height;
+	font-weight: $weight;
+	color: $color;
+}
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;
+		}
+	}
+}
+// Flexbox
+@mixin flexy($direction: row, $wrap: nowrap, $justify: flex-start, $align-items: stretch) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align-items;
+}
+// Media Query
+@mixin mq($break) {
+	@if $break == "small" {
+		@media (min-width: $brkpoint-sm) and (max-width: $brkpoint-lg -1) {
+			@content;
+		}
+	}
+	@else if $break == "large" {
+		@media (min-width: $brkpoint-lg) {
+			@content;
+		}
+	}
+	@else {
+		@error "Whoops! No value could be retrieved for '#{$break}'";
+	}
+}

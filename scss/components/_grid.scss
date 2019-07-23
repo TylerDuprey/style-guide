@@ -1,0 +1,59 @@
+/* CSS Document */
+.centered {
+  margin: 0 auto;
+}
+.container {
+	padding: 0 5%;
+  font-family: $font__family--secondary;
+	@include mq(large) {
+		padding: 0 12.5%;
+	};
+}
+.grid__row {
+	margin-top: em(16px);
+	margin-bottom: em(32px);
+	@include mq(large) {
+		@include flexy($justify: space-between);
+	};
+}
+// Dynamically output grid column widths, gutters and other stylilng
+@for $i from 1 through $grid-col-count {
+  $context: grid-context($grid-col-width, $grid-col-count,$grid-gutter-width);
+  $target: ($grid-col-width * $i) + ($grid-gutter-width * ($i - 1));
+  // Generate Column Modifier Classes
+  .grid__col--#{$i} {
+  	@extend %grid-container;
+    @include flexy(column,  $align-items: stretch);
+    @include mq(large) {
+      width: percentage($target / $context);
+  		text-align: center;
+    }
+  }
+}
+.grid__col {
+  @include bg-colors($palettes);
+	&--12 {
+  	@include mq(large) {
+      @include flexy($justify: space-between);
+  	}
+	};
+}
+.grid__row,
+.nav {
+	@include mq(large) {
+    @include flexy($wrap: wrap, $justify: space-between);
+	};
+};
+.grid__col--9 {
+	@include mq(large) {
+    @include flexy($justify: flex-end,$align-items: center);
+	};
+};
+.grid__col--3 > .link {
+  align-self: center;
+};
+.card {
+	@include mq(large) {
+		text-align: left;
+	};
+};

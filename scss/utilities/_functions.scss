@@ -1,0 +1,17 @@
+/* SCSS Document */
+
+// Import if Google Font URL is defined
+@if variable-exists(font__url--google) {
+	@import url($font__url--google);
+}
+
+// Calculate em values
+@function em($target, $context: $base__font--size) {
+	@return ($target / $context) * 1em;
+}
+
+// CSet the "context" width for the grid
+@function grid-context($grid-col-width,$grid-col-count,$grid-gutter-width) {
+	$grid-context: ($grid-col-width * $grid-col-count) + ($grid-gutter-width * ($grid-col-count - 1));
+	@return $grid-context;
+}

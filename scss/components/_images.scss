@@ -1,0 +1,20 @@
+/* SCSS Document */
+.img {
+	&--logo {
+		margin: em(16px) 0 0;
+		width: 135px;
+	};
+	&--avatar {
+		display: block;
+		margin: em(16px) auto;
+		@include mq(large) {
+			display: inline;
+			max-width: 175px;
+		};
+	};
+	&--frame {
+		padding: 4.5%;
+		width: 100%;
+		border: 1px solid $grey;
+	};
+}

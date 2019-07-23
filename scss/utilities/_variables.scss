@@ -1,0 +1,98 @@
+/* SCSS Partial */
+/* At minimum, create variables for fonts, breakpoints, and colors */
+// Viking #58E1C1 rgba(88,225,193);
+// Malibu #51DDFC rgba(81,221,252);
+// Emerald #63cc82 rgba(99,204,130);
+// Sunglo #E4757A rgba(228,117,122);
+// Coral #FD7856 rgba(253,120,86);
+// Mountain #927BC1 rgba(146,123,193);
+
+// Descriptive Base Colors
+$white		: #fff;
+$black		: #0b0b0b;
+$grey			: #797e83;
+
+$viking            : #58E1C1;
+$malibu            : #51DDFC;
+$emerald           : #63cc82;
+$sunglo            : #E4757A;
+$coral             : #FD7856;
+$mountain          : #927BC1;
+
+// Color Usage
+$color-primary		 : $viking;
+$color-secondary	 : $malibu;
+
+$color-text-white	 : $white;
+$color-text-base   : $black;
+$color-text-light	 : $grey;
+
+$color-btn-success : $emerald;
+$color-btn-error   : $sunglo;
+$color-btn-warning : $coral;
+$color-btn-info    : $mountain;
+
+// UI Colors
+$ui-colors: (
+	default  : $color-secondary,
+  success  : $color-btn-success,
+  error    : $color-btn-error,
+  warning  : $color-btn-warning,
+  info     : $color-btn-info
+);
+
+// Color Palette Modifiers
+$palettes: (
+	"12.theme__colors"    : lighten($color-primary,10%),
+	"8.theme__colors"     : darken($color-secondary,10%),
+	"7.theme__colors"     : lighten($color-btn-error,10%),
+	"6.theme__colors"     : darken($color-secondary,25%),
+	"5.theme__colors"     : lighten($color-btn-success,10%),
+	"4.theme__colors"     : lighten($color-secondary,7%),
+	"3.theme__colors"     : lighten($color-btn-info,19%)
+);
+
+// Color Palette Modifiers
+$palettes: (
+	"12.theme__colors"    : lighten($color-primary,10%),
+	"8.theme__colors"     : darken($color-secondary,10%),
+	"7.theme__colors"     : lighten($color-btn-error,10%),
+	"6.theme__colors"     : darken($color-secondary,25%),
+	"5.theme__colors"     : lighten($color-btn-success,10%),
+	"4.theme__colors"     : lighten($color-secondary,7%),
+	"3.theme__colors"     : lighten($color-btn-info,19%)
+);
+
+// grid
+$grid-col-width         : 65px;
+$grid-gutter-width      : 20px;
+$grid-col-count         : 12;
+$grid-cont-max-w        : 1050px;
+
+// Text
+
+$base__font--size		: 16px;
+$base__line					: 24px;
+
+// Font Stack Variables
+$font__url--google         : 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+
+$font__family--primary     : "Lato","Helvetica Neue",Helvetica, Arial, sans-serif;
+$font__family--secondary	 : "Helvetica Neue",Helvetica, Arial, sans-serif;
+
+$font__weight--thin				 : 100;
+$font__weight--light			 : 300;
+$font__weight--medium			 : 400;
+$font__weight--bold				 : 700;
+$font__weight--ultra-bold	 : 900;
+
+// Asset paths
+$path-img  : '../img';
+
+// Media Query breakpoints
+$brk-desktop  : '(min-width: 1024px)';
+
+// Breakpoints
+
+$brkpoint-sm    : 1px;
+$brkpoint-lg    : 1024px;

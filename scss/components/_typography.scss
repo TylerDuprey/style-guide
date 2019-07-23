@@ -1,0 +1,47 @@
+/* CSS Document */
+.container {
+	font-family: $font__family--primary;
+	color: $color-text-light;
+}
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  color: $color-secondary;
+	&:hover {
+		color: $color-primary;
+	}
+	&:visited {
+		color: $color-secondary;
+	}
+}
+.headline {
+	&--primary {
+		@include text(2em,1.25em,400, $color-primary);
+		font-family: $font__family--primary;
+		margin-left: em(16px);
+		@include mq(large) {
+			text-align: left;
+		};
+	}
+	&--secondary {
+		@include text(em(20px),em(24px),100, $color-text-light);
+		font-family: $font__family--secondary;
+		margin-bottom: em(32px);
+		@include mq(large) {
+			text-align: left;
+			-webkit-margin-before: em(21.28px);
+			-webkit-margin-after: em(21.28px);
+			-webkit-margin-start: em(0px);
+			-webkit-margin-end: em(0px);
+		};
+	}
+}
+.blockquote {
+	@include text(em(23.2px),em(26px),400, $color-text-light);
+	@extend %border-left;
+  margin-bottom: em(48px);;
+  padding-left: em(16px);;
+  font-family: $font__family--primary;
+  font-style: italic;
+  border-radius: 5px;
+}

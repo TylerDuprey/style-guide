@@ -1,0 +1,22 @@
+/* SCSS Document */
+.form {
+	&__label--hidden {
+		display: none;
+	}
+	&__input {
+		@include text(em(14px), $weight: 700);
+		display: block;
+		width: 90%;
+		margin: em(16px) auto;
+		padding-left: em(10px);
+		padding-top: em(12px);
+		padding-bottom: em(12px);
+		border-top: none;
+		border-right: none;
+		border-bottom: 5px solid $color-primary;
+		border-left: 0;
+	}
+}
+.form .btn--default {
+  width: 95%;
+}
